@@ -40,7 +40,7 @@
 		</tr>
 		<tr>
 			<td>Delivery Center:</td>
-			<td><input name="delivery_center" type="text" /></td>
+			<td><input name="delivery_center" type="text" value="China" /></td>
 		</tr>
 		<tr>
 			<td>Price no larger than:</td>
