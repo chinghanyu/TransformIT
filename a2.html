@@ -7,6 +7,15 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+.auto-style2 {
+	font-family: "Courier New", Courier, monospace;
+}
+</style>
+
 </head>
 <body>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5117cfb135fe5a50"></script>
@@ -54,18 +63,47 @@
 				by using the notation TABLENAME (attribute1,attribute2,…), and 
 				also in English. Describe your query on your a2 page by writing 
 				your query in SQL, and in English.<br />
-				<strong>A1.</strong> Answer begins here.</p>
+				<strong>A1.</strong> Our table in the database has the format:
+				<span class="auto-style2">
+				<strong>service(vendor_service, price, delivery_center, 
+				service_window_hour, service_window_week)</strong></span>, which 
+				is shown as follows.</p>
+				<p class="auto-style1"><img class="pic" height="242" src="images/a2_ans1_table_service.png" width="557" /><br />
+				Figure 1. Table: service</p>
+				<p>We then made a query using following SQL command:
+				<span class="auto-style2">SELECT vender_service FROM service 
+				WHERE delivery_center='North Carolina';</span>. The result is 
+				shown below.</p>
+				<p class="auto-style1"><img class="pic" alt="" height="242" src="images/a2_ans1_table_serviceq.png" width="557" /><br />
+				Figure 2. 
+				Table: serviceq</p>
 				<p><strong>Q2.</strong> Create a static data page containing the 
 				response to your query. Save it in your folder. Create a link 
 				from your a2 page to your data page.<br />
-				<strong>A2.</strong> Answer begins here.</p>
+				<strong>A2.</strong> Please refer to the
+				<a href="a2_ans2_table_serviceq.html">link</a> for our answer to
+				<strong>Q2</strong>.</p>
 				<p><strong>Q3.</strong> Add a second table to your database. 
 				Make sure it is also non-redundant. Write a two-table query. 
 				Save it in your database. Describe the new table on your a2 page 
 				by using the notation of Question 1, and also in English. 
 				Describe the new query on your a2 page by writing it in SQL, and 
 				also in English.<br />
-				<strong>A3.</strong> Answer begins here.</p>
+				<strong>A3.</strong> We first added a new table called customer 
+				shown as follows.</p>
+				<p class="auto-style1">
+				<img class="pic" height="242" src="images/a2_ans3_table_customer.png" width="557" /><br />
+				Figure 3. Table: customer</p>
+				<p>Then, we perfomed a two-table query using the following SQL 
+				command: <span class="auto-style2">SELECT service.vender_service, service.price, 
+				service.delivery_center, customer.reference_customer FROM 
+				service, customer WHERE 
+				service.vender_service=customer.vender_service AND 
+				service.delivery_center='North Carolina' AND 
+				customer.reference_customer='Cummins' AND service.price&lt;70;</span>. 
+				The result is shown below.</p>
+				<p class="auto-style1"><img class="pic" height="238" src="images/a2_ans3_two_table_query.png" width="553" /><br />
+				Figure 4. The result of two-table query</p>
 				<p><strong>Q4.</strong> <strong>a.</strong> Read the article on 
 				<a href="a2_direct_marketing.html" target="_blank">Direct Marketing</a> and explain how Target determines if someone is 
 				pregnant. <strong>b.</strong> What is relationship marketing? 
@@ -77,10 +115,15 @@
 				<strong>A4. </strong>Answer begins here.</p>
 				<p><strong>Q5.</strong> Create a dynamic data page, and a link 
 				to it from your main page.<br />
-				<strong>A5.</strong> Answer begins here.</p>
+				<strong>A5.</strong> Please refer to the 
+				<a href="a2_ans5_serviced.aspx">link</a> for our answer to
+				<strong>Q5</strong>. The SQL 
+				command used to query was the same as that in <strong>A1</strong>.</p>
 				<p><strong>Q6.</strong> Create an interactive data page, and a 
 				link to it from your main page.<br />
-				<strong>A6.</strong> Answer begins here.</p>
+				<strong>A6.</strong> Please refer to the
+				<a href="a2_ans_servicei.aspx">
+				link</a> for our answer to <strong>Q6</strong>.</p>
 				<p><strong>Q7.</strong> Stock markets can be used to make 
 				predictions. Go to <a href="http://www.hsx.com" target="_blank">www.hsx.com</a> 
 				and see how they use a stock market to predict the success of 
@@ -102,7 +145,7 @@
 				a business successfully creating synergies between online and 
 				physical stores.<br />
 				<strong>A8.</strong> Answer begins here.</p>
-				<p><strong>Q9.</strong> a. Read the 
+				<p><strong>Q9.</strong> <strong>a.</strong> Read the 
 				<a href="a2_culturomics_search_for_historical_and_cultural_trends.html" target="_blank">article on Culturomics</a> and 
 				explain how Google’s Digitized Book database can be used to 
 				understand historical and cultural trends. <strong>b.</strong> 
@@ -115,7 +158,48 @@
 				plot how the relative emphasis on wireless internet and wired 
 				internet changed during the last 20 years. Provide a screen shot 
 				of your graph on your web page.<br />
-				<strong>A9.</strong> Answer begins here.</p>
+				<strong>A9.</strong> <strong>a.</strong> In a single statement, 
+				it is getting the mathematics attached to history and 
+				humanities, since it’s not considered ‘measurable. ’As per the 
+				article, the goal of building such a tool is to even equip the 
+				kids to browse through the cultural trends throughout history, 
+				as they were recorded in books. Two hundred years of history in 
+				the form of 5 million digitized books can now be probed for 
+				cultural trends using Google's new culturomics tool and the 
+				integrated N-gram viewer.</p>
+				<p><strong>b.</strong> The kind of acceptance that is given to 
+				one keyword vs. the other at a certain point of time gives an 
+				idea about how popular is the topic and how many of their 
+				journals/publications were popular. Seeing the trend over 200 
+				years can give us an idea about whether the society has gained 
+				more popularity over the other by seeing either an individual’s 
+				popularity or the correlation between two authors/the topics 
+				which have gained interest and this data can be used to realize 
+				some amazing.</p>
+				<p><strong>c.</strong> When developing a business strategy, it 
+				is important to understand industry trends, the practices of 
+				competitors, and the state of an existing strategy overall. For 
+				example, by understanding current activity, a plan can be made 
+				to accommodate market demand. It is also advisable to forecast 
+				changes in order to create a system that will be able to adjust 
+				to new trends. Also, it has the potential to dig out some 
+				obvious errors in the past failures.</p>
+				<p>Say, I have to choose between IT strategies within my firm. I 
+				can look up the trends of let’s say cloud computing vs dedicated 
+				infrastructure and I can make out the differences of trends as 
+				shown below to get an idea. I can even go for further detailing 
+				as to see what vendors or what strategies have worked out in the 
+				past and what should I avoid after doing proper research.</p>
+				<p class="auto-style1">
+				<img class="pic" src="images/a2_ans9_example.png" width="95%" /><br />
+				Figure X. (discription)</p>
+				<p><strong>d.</strong> <span lang="EN-US">We tried to study the 
+				comparison between Rack servers and Blade servers and not 
+				surprisingly, the demand of blade servers has been increasing 
+				over the past 20 years. Snapshot attached below</span>.</p>
+				<p class="auto-style1">
+				<img class="pic" src="images/a2_ans9_snapshot.png" width="95%" /><br />
+				Figure X. (discription)</p>
 				<p><strong>Q10.</strong> <strong>a.</strong> Write a negative 
 				query. Save it in your database. Describe the query on your web 
 				page in English and in SQL. Be careful with negative queries. If 
@@ -146,7 +230,49 @@
 				adoption of new and improved technologies may leave everyone 
 				worse off. List the conditions that would lead to that outcome. 
 				Give an example from your business or elsewhere.<br />
-				<strong>A11.</strong> Answer begins here.</p>
+				<strong>A11.</strong> <strong>a.</strong> Inconsistency vs 
+				Overload is one of the primary trade-offs, which originated the 
+				centralization-decentralization debate. When the data is 
+				inconsistent, this means the data is not collected and 
+				synchronized in some cases to other units of the same business 
+				(also referred as localized data). In this case there is not 
+				enough data to make interpretation or the decision making is 
+				done locally at every unit. On the other hand, when there is a 
+				lot of data to analyze at a central level, it could lead to 
+				discrepancies among various units since all the policies are 
+				centralized. It makes the system more complex and has a single 
+				point of failure.</p>
+				<p><strong>b.</strong> Yes, the organizational databases improve 
+				centralized decision making since, everyone has the same 
+				consistent information to analyze and in turn the decision 
+				makers in an organization use that centralized database to 
+				create new policies and business strategies moving forward. This 
+				also leads to consistency among the data in different business 
+				units and can lead to an integrated environment.</p>
+				<p><strong>c.</strong> According to the Braess’ paradox, network 
+				effects tip the scale towards centralization as the network 
+				effects always start from the center and the center is the 
+				originating point.</p>
+				<p><strong>d.</strong> Braess paradox uses highways to show the 
+				fact that adding an extra road or increasing capacity in a 
+				traffic network can actually increase the average travel time on 
+				a highway. A good example of this was seen in Boston’s Big dig 
+				project. According to boston.com: The Big Dig, essentially 
+				increased the capacity of the central highway and its 
+				interchanges by placing the entire system as a series of tunnels 
+				under the central business district. It did relieve congestion 
+				but the overall commute times were actually longer as a result. 
+				As almost all people started using the new route, which led to a 
+				bottleneck on that route. This was the cause of Network Effects.</p>
+				<p><strong>e.</strong> According to Braess, the wide spread 
+				adoption of new technologies may leave everyone worse-off. The 
+				condition on this statement is that without adequate 
+				centralization, we won’t be able to realize proper Network 
+				effects. For example, If we upgrade only a part of our business 
+				to enjoy greater bandwidth due to the load on that unit. But, if 
+				we don’t implement it centrally, we risk forming a bottleneck in 
+				the routes between these units. This could lead to what Braess 
+				tried to explain.</p>
 				<p><strong>Q12.</strong> <strong>a.</strong> Explain the basic 
 				tradeoff between market share and market size as it relates to 
 				technology outsourcing? <strong>b.</strong> Do network effects 
