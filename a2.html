@@ -64,7 +64,7 @@
 						<li>Q7. Not yet assigned</li>
 						<li>Q8. Done by Amrisha, proof reading requested</li>
 						<li>Q9. Done by Pranjal, proof reading requested</li>
-						<li>Q10. Assigned to Amrisha</li>
+						<li>Q10. Done by Amrisha, proof reading requested</li>
 						<li>Q11. Done by Pranjal, proof reading requested</li>
 						<li>Q12. Done by Amrisha, proof reading requested</li>
 						<li>Q13. Done by Hans, proof reading requested</li>
@@ -320,7 +320,30 @@
 				Describe the new non-redundant database using the same notation 
 				and show its contents using the same table format. You don’t 
 				have to actually create this table in MS ACCESS.<br />
-				<strong>A10.</strong> Answer begins here.</p>
+				<strong>A10.</strong> <strong>a.</strong> Negative Query: Show 
+				all services that are not offered in North Carolina or Mexico, 
+				the SQL command is as follows: <span class="auto-style2">SELECT 
+				distinct customer.vender_service FROM customer, service WHERE 
+				(customer.vender_service NOT IN (SELECT service.vender_service 
+				FROM service WHERE service.delivery_center='North Carolina' OR 
+				service.delivery_center='Mexico'));</span></p>
+				<p><strong>b.</strong> Redundant Database:&nbsp; <span class="auto-style2"><strong>
+				total_revenue(reference_customer, delivery_ceneter, 
+				gross_revenue, YTD)</strong></span></p>
+				<p class="auto-style1"><img class="pic" height="242" src="images/a2_ans10_redundant_database.png" width="557" /><br />
+				Firuge X. A table with redundancy</p>
+				<p> In this database we are interested in knowing the gross 
+				revenue per customer for each service that we offer. It is 
+				redundant, because while it is helpful to know the gross revenue 
+				per customer for every delivery center, the delivery center 
+				field is stored twice in two different tables. It is unecessary 
+				to have the the delivery center field in this table because two 
+				nested queries can help extract the delivery center data from 
+				the first two tables using the common key:
+				<span class="auto-style2"><strong>vender_service</strong></span>. 
+				Therefore, we can have our inredundant table with following format:
+				<span class="auto-style2"><strong>
+				total_revenue(reference_customer, gross_revenue, YTD)</strong></span>.</p>
 				<p><strong>Q11.</strong> <strong>a.</strong> Explain the 
 				fundamental tradeoff between inconsistency and information 
 				overload in organizational decision-making. How is it related to 
