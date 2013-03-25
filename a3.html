@@ -7,8 +7,45 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_popUpMsg(msg) {//v1.0
+ alert(msg);
+}
+// -->
+</script>
+
 </head>
-<body>
+
+<body onload="FP_preloadImgs(/*url*/'images/a3_ans1_button2.jpg',/*url*/'images/a3_ans1_button3.jpg');">
+
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5117cfb135fe5a50"></script>
 <div id="wrapper">
 	<div id="header">
@@ -51,7 +88,11 @@
 				Insert a video clip into your web page. Many are available on 
 				youtube.com. Alternatively, insert background music to your web 
 				page, so that music starts as soon as a visitor opens your page.<br />
-				<strong>A1.</strong> Answer begins here.</p>
+				<strong>A1.</strong> <strong>a.</strong> An interactive button 
+				is shown below.</p>
+				<p class="auto-style1"><img id="img1" alt="BUY" height="20" onclick="FP_popUpMsg('THANK YOU FOR BUYING. WE HAVE FREE SHIPPING TODAY FOR ORDERS OVER $50')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/a3_ans1_button3.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/a3_ans1_button1.jpg')" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'images/a3_ans1_button2.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'images/a3_ans1_button2.jpg')" src="images/a3_ans1_button1.jpg" style="border: 0" width="100" /></p>
+				<p><strong>b.</strong> A video clip is inserted as follows.</p>
+				<p class="auto-style1"><iframe width="420" height="315" src="http://www.youtube.com/embed/Q9t2K487gCs" frameborder="1" allowfullscreen></iframe></p>
 				<p><strong>Q2.</strong> Use redirecting technology to change the 
 				address of your web site to a catchy name, and redirect all 
 				traffic coming into that address to your real site. Report your 
@@ -76,7 +117,17 @@
 				<a href="http://www.google.com/ig" target="_blank">
 				www.google.com/ig</a>. Provide a link to your personal Google 
 				page from your a3 page with your account name and password.<br />
-				<strong>A4.</strong> Answer begins here.</p>
+				<strong>A4.</strong> <strong>a.</strong> A 3D map and its street view 
+				are shown below.</p>
+				<p class="auto-style1"><img class="pic" src="images/a3_ans4_3d_map.png" width="95%" /><br />
+				Figure 1. the 3D map of Taj Mahal</p>
+				<p class="auto-style1">
+				<img class="pic" src="images/a3_ans4_3d_street_view.png" width="95%" /><br />
+				Figure 2. the street view of Taj Mahal</p>
+				<p><strong>b.</strong> An RSS feed is shown below.</p>
+				<p class="auto-style1"><iframe src="http://mysite.rapidfeeds.com/prv_mysite.php?mysite_id=81271" width='335' frameborder='1'></iframe>
+				<br />
+				Figure 3. the RSS feed of CNN.com</p>
 				<p><strong>Q5.</strong> <strong>a.</strong> What properties 
 				characterize Executive Information Systems (EIS)? <strong>b.</strong> 
 				Read
@@ -141,7 +192,18 @@
 				Geo-tag your photos. Geo-tagging involves hyperlinking each 
 				photo to a specific location on a map, which shows where the 
 				photo was taken. Hyperlinks can go in either direction.<br />
-				<strong>A8.</strong> Answer begins here.</p>
+				<strong>A8.</strong> <strong>a.</strong> a Google Map direction 
+				of Sage Hall is shown below.</p>
+				<p class="auto-style1">
+				<img class="pic" src="images/a3_ans8_google_map_direction.png" width="95%" /><br />
+				Figure 4. a Google Map direction of a golf course in Ithaca</p>
+				<p><strong>b.</strong> and <strong>c.</strong> the same map after being edited by using MS Paint 
+				accompanied with a hypertext link</p>
+				<p class="auto-style1">
+				<a href="http://www.frontiernet.net/~ithacaisgorges/LR002.jpg" target="_blank">
+				<img class="pic" src="images/a3_ans8_google_map_direction_edited.png" width="95%" /></a><br />
+				Figure 5. the edited map 
+				with a link to a picture</p>
 				<p><strong>Q9.</strong> <strong>a.</strong> Go to
 				<a href="http://shop.timberland.com/category/index.jsp?categoryId=4238671" target="_blank">
 				http://shop.timberland.com/category/index.jsp?categoryId=4238671</a> 
@@ -159,7 +221,18 @@
 				maybe more important with digital goods than physical goods.
 				<strong>d.</strong> Explain how customized recommendations may 
 				lead to the long tail phenomenon.<br />
-				<strong>A9.</strong> Answer begins here.</p>
+				<strong>A9.</strong> <strong>a.</strong> A custom design of a boot. The 
+				customizable features are: gender (men/women/kids), size, 
+				embroidery, initials with specific font, colors (of leather 
+				upper, collar, midsole, outsole, laces, hardware, script leather 
+				option, script stitching option). The snapshot is as follows</p>
+				<p class="auto-style1">
+				<img class="pic" src="images/a3_ans9_custom_boot_design.png" width="95%" /><br />
+				Figure 6. the snapshot of a custom boot design</p>
+				<p><strong>b.</strong> An example of marquee is shown below</p>
+				<p><marquee behavior="scroll" direction="left"> We got the afternoon. You got this room for two One thing I've left to do Discover me, Discovering you. One mile to every inch of Your skin like porcelain One pair of candy lips and Your bubblegum tongue </marquee></p>
+				<p><strong>c.</strong> Answer begins here.</p>
+				<p><strong>d.</strong> Answer begins here.</p>
 				<p><strong>Q10.</strong> <strong>a.</strong> Create a customized 
 				radio station at www.pandora.com and provide a link to it, or 
 				provide a screen shot of your customization. Use help at
