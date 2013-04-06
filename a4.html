@@ -7,6 +7,24 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
+<script type="text/javascript">
+<!--
+function FP_setTextFieldText(id,txt,form) {//v1.0
+ var el=FP_getObjectByID(id); if(el!=null) el.value=txt;
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+
 </head>
 <body>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5117cfb135fe5a50"></script>
@@ -54,9 +72,58 @@
 				deduct the amount of each check from your account balance.
 				<strong>c.</strong> Test for a negative account balance, and 
 				issue a warning for overdrawn accounts.<br />
-				<strong>A1.</strong> <strong>a.</strong> </p>
-				<p><strong>b.</strong> </p>
-				<p><strong>c.</strong> </p>
+				<strong>A1.</strong> <strong>a.</strong>, <strong>b.</strong> and
+				<strong>c.</strong> An electronic check 
+				with account summary and overdrawn warning. (Only supported by Microsoft Internet Explorer)</p>
+				<form name="F1">
+					<table style="width: auto">
+						<tr>
+							<td><label id="lblAmount">AMOUNT:</label>&nbsp;</td>
+							<td>
+							<input name="txtAmount" type="text" onclick="FP_setTextFieldText(/*id*/'txtAmount', ' ', /*id*/'F1')" onmousemove="FP_setTextFieldText(/*id*/'txtAmount', 'Enter your check amount here.', /*id*/'F1')" /></td>
+						</tr>
+						<tr>
+							<td><label id="lblTo">TO:</label></td>
+							<td><input name="txtTo" type="text" />&nbsp;</td>
+						</tr>
+						<tr>
+							<td><label id="lblFrom">FROM:</label>&nbsp;</td>
+							<td><input name="txtFrom" type="text" />&nbsp;</td>
+						</tr>
+						<tr>
+							<td>
+							<input name="btnPay" type="button" value="Pay" /></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+				<p>&nbsp;</p>
+				<form name="F2">
+					<table style="width: auto">
+						<tr>
+							<td><label id="lblChecklist">CHECKLIST:</label></td>
+							<td>
+							<textarea cols="40" name="txaChecklist" rows="10"></textarea></td>
+						</tr>
+						<tr>
+							<td><label id="lblBalance">BALANCE:</label></td>
+							<td>
+							<input name="txtBalance" type="text" value="500" /></td>
+						</tr>
+					</table>
+				</form>
+				<script type="text/vbscript" language=VBScript>
+				Sub btnPay_onClick
+					F2.txtBalance.Value=F2.txtBalance.Value - F1.txtAmount.Value
+					
+					If F2.txtBalance.Value < 0 Then
+						Msgbox "YOUR ACCOUNT IS OVERDRAWN"
+					End If
+
+					F2.txaChecklist.Value = F2.txaChecklist.Value & " FROM " & F1.txtFrom.Value & " TO " & F1.txtTo.Value & " AMOUNT " & F1.txtAmount.Value & VBCR  
+				End Sub
+				</script>
+				<p>&nbsp;</p>
 				<p><strong>Q2.</strong> Add a script to your electronic check to 
 				guide users in filling out their electronic checks.<br />
 				<strong>A2.</strong> </p>
