@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>A Password Protected Page</title>
+</head>
+
+<body>
+	<script language="javascript">
+		<!--///*This Script allows people to enter by using a form that asks for a UserID and Password*/
+		function pasuser(form) {
+			if (form.id.value=="nba6010") { 
+				if (form.pass.value=="nba6010") {              
+					location="a1.html" 
+				} else {
+					alert("Invalid Password")
+				}
+			} else {
+				alert("Invalid UserID")
+			}
+		}
+		//-->
+	</script>
+
+	<center>
+		<form name="login" >
+			<table bgcolor="white" cellpadding="12" border="1">
+				<tr>
+					<td colspan="2"><center><h1><i><b>Login Area</b></i></h1></center></td>
+				</tr>
+				<tr>
+					<td><h1><i><b>UserID:</b></i></h1></td>
+					<td><input name="id" type="text" /></td>
+				</tr>
+				<tr>
+					<td><h1><i><b>Password:</b></i></h1></td>
+					<td><input name="pass" type="password" /></td>
+				</tr>
+				<tr>
+					<td><center><input type="button" value="Login" onClick="pasuser(this.form)" /></center></td>
+					<td><center><input type="Reset" /></center></td>
+				</tr>
+			</table>
+		</form>
+	</center> 
+</body>
+
+</html>
