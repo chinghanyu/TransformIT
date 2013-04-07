@@ -71,6 +71,22 @@ p {
 	margin-bottom: 1.5em;
 }
 
+p.centered {
+	text-align: center;
+}
+
+div.centered {
+    text-align: center;
+}
+
+div.centered table {
+    margin: 0 auto; 
+    text-align: left;
+    border:1px solid;
+    box-shadow: 10px 10px 5px #888888;
+    padding: 10px;
+}
+
 ul {
 	margin-bottom: 1.5em;
 }
