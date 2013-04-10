@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+		<Ad>
+			<ImageUrl>http://www.expression-web-help.com/NewsPortal/img/3.jpg</ImageUrl>
+			<NavigateUrl>http://www.expression-web-designer-help.com</NavigateUrl>
+			<AlternateText>Shown the least amount of times</AlternateText>
+			<Keyword>Computers</Keyword>
+			<Impressions>1</Impressions>
+		</Ad>
+		<Ad>
+			<ImageUrl>http://www.ftjcfx.com/image-2774817-10408713</ImageUrl>
+			<NavigateUrl>http://www.kqzyfj.com/click-2774817-10408713</NavigateUrl>
+			<AlternateText>ProStores 1 Month Free Trial</AlternateText>
+			<Keyword>E-Commerce</Keyword>
+			<Impressions>2</Impressions>
+		</Ad>
+</Advertisements>
