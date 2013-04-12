@@ -10,8 +10,16 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <!-- Load required JavaScripts -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="javascripts/readmore.js"></script>
+<script type="text/javascript" src="javascripts/s3Slider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#s3slider').s3Slider({
+			timeOut: 4000
+		});
+	});
+</script>
 
 </head>
 <body>
@@ -35,9 +43,22 @@
 		</ul>
 		<br class="clearfix" />
 	</div>
-	<div id="splash">
-		<img class="pic" src="images/pic01.gif" width="870" height="374" alt="" />
-  </div>
+	<!-- <div id="splash"><img class="pic" src="images/pic01.gif" width="870" height="374" alt="" /></div> -->
+	
+	<div id="s3slider">
+		<ul id="s3sliderContent">
+			<li class="s3sliderImage">
+            	<img class="pic" alt="" src="images/s3slider/pic01.jpg" />
+            	<span class="bottom"><strong>Welcome to TransformIT</strong><br />TransformIT was one of the earliest companies in the world to recognise and adopt Remote Infrastructure Management and Co-sourcing as a primary delivery model for delivering Infrastructure management services.</span>
+        	</li>
+			<li class="s3sliderImage">
+				<img class="pic" alt="" src="images/s3slider/pic02.jpg" />
+				<span class="bottom"><strong>Gotcha!</strong><br />Oracle, we knew you are watching us.</span>
+			</li>
+			<div class="clear s3sliderImage"></div>
+		</ul>
+	</div>
+	
 	<div id="page">
 		<div id="content">
 			<div class="box">
@@ -100,8 +121,7 @@
 				<h3>Cover Stories</h3>
 				<ul class="section-list">
 				  <li class="first">
-						<img class="pic alignleft" src="images/pic02.gif" width="70" height="70" alt="" />
-						<span class="excerpt15">TransformIT – Nokia has more than 16 year old relationship in addressing Indian Mobile Consumers. The joint value created by TransformIT-Nokia partnership is in excess of USD 5 Billion for the last 3 years alone.</span></li>
+						<img class="pic alignleft" src="images/pic02.gif" width="70" height="70" alt="" /><span class="excerpt15">TransformIT – Nokia has more than 16 year old relationship in addressing Indian Mobile Consumers. The joint value created by TransformIT-Nokia partnership is in excess of USD 5 Billion for the last 3 years alone.</span></li>
 					<li>
 						<img class="pic alignleft" src="images/pic02.gif" width="70" height="70" alt="" />
 						<span class="excerpt15">TransformIT caters Dow Jones IT environment by providing them with its state-of-the-art  IT Service desk, Command Center, End user applications like Messaging, Internal web Services, Networks &amp; Security services, Datacenter Management, Database management, 
@@ -114,7 +134,9 @@
 			</div>
 			<div class="box" id="content-box2">
 				<h3>News</h3>
-				<p>Some thing can be pasted here.</p>
+				<h4>Gotcha!</h4>
+				<h5>Oracle, we knew you are watching us</h5>
+				<p>Guys, say "Hello!" to our new visitor from Oracle. </p>
 				<ul class="list">
 			    <li class="first"><a href="#">TransformIT has been rated as No.1 in Traditional Outsourcing Space and also in Remote Management Infrastructure Outsourcing by Datamonitor’s The Black Book of Outsourcing 2009-10.</a></li>
 					<li><a href="#">Employee First Customer Second philosophy is taught as a HBS case study</a></li>
