@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>s3Slider Splash Page</title>
+
+	<!-- Load CSS settings -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<!-- Load required JavaScripts -->
+	<script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="javascripts/s3Slider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#s3slider').s3Slider({
+				timeOut: 4000
+			});
+		});
+	</script>
+
+</head>
+
+<body style="background:#fff">
+	<div id="s3slider">
+		<ul id="s3sliderContent">
+			<li class="s3sliderImage">
+            	<img class="pic" alt="" src="images/s3slider/pic01.jpg" />
+            	<span class="bottom"><strong>Welcome to TransformIT</strong><br />TransformIT was one of the earliest companies in the world to recognise and adopt Remote Infrastructure Management and Co-sourcing as a primary delivery model for delivering Infrastructure management services.</span>
+        	</li>
+			<li class="s3sliderImage">
+				<img class="pic" alt="" src="images/s3slider/pic02.jpg" />
+				<span class="bottom"><strong>Gotcha!</strong><br />Oracle, we knew you are watching us.</span>
+			</li>
+			<div class="clear s3sliderImage"></div>
+		</ul>
+	</div>
+</body>
+
+</html>
