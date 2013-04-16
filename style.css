@@ -336,14 +336,37 @@ ul h4 {
 }
 
 #s3slider {
-    width: 935px; /* important to be same as image width */
-    height: 439px; /* important to be same as image height */
-    position: relative; /* important */
-    overflow: hidden; /* important */
+    width: 980px;			/* width = 870px (width of image) 
+    						 *         + 9px (left image padding) 
+    						 *         + 1px (solid line width)
+    						 *         + 9px (right image padding) 
+    						 *         + 1px (solid line width)
+    						 *         + 45px (left content padding)
+    						 *         + 45px (right content padding)
+    						 *       = 980px
+    						 */
+    height: 449px;			/* height = 374px (height of image)
+    						 *          + 9px (top image padding)
+    						 *          + 1px (solid line height)
+    						 *          + 9px (buttom image padding)
+    						 *          + 1px (solid line height)
+    						 *          + 45px (top content padding)
+    						 *          + 10px (buttom content padding) 
+    						 *        = 449px
+    						 */
+	position: relative;		/* important */
+	overflow: hidden;		/* important */
 }
  
 #s3sliderContent {
-    width: 837px; /* important to be same as image width or wider */
+    width: 890px;			/* width = 870px (width of image)
+    								   + 9px (left image padding)
+    								   + 1px (solid line width)
+    								   + 9px (right image padding)
+    								   + 1px (solid line padding)
+    								 = 890px
+    						 */
+	height: 394px;
     position: absolute; /* important */
     top: 0; /* important */
     padding: 45px 45px 10px 45px;
