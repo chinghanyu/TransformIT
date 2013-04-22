@@ -49,7 +49,18 @@
 				<p><strong>Q1.</strong> Have a chat with a chat bot. Try to trip 
 				it up. Find an example where it misunderstood you or ignored 
 				you, and report it on your web page.<br />
-				<strong>A1.</strong> </p>
+				<strong>A1.</strong> Here is the chat log.</p>
+				<p class="centered">
+				<img class="pic" alt="" height="707" src="images/a5_ans1_fooling_alice.png" width="803" /><br />
+				Figure 1. Fooling A.L.I.C.E.</p>
+				<p>Cleary, A.L.I.C.E. is equipped with a database, or more 
+				specifically, a knowledge engine, so that 
+				it can understand by breaking sentences, looking up key words in 
+				the dictionary, and then coming up with a somewhat reasonable 
+				answer. However, when there appears some specific words such as 
+				'Santa Bot,' which cannot be found in the dictionary, A.L.I.C.E. 
+				will try to change the subject, pretending that it forgets the 
+				topic we are talking about.</p>
 				<p><strong>Q2.</strong> <strong>a.</strong> Play a game of 
 				Jeopardy against IBM Watson, a general-purpose question 
 				answering system at
@@ -60,8 +71,31 @@
 				on 
 				<a href="a5_google_now_question_answering_system.html" target="_blank">Google Now</a>, and give some examples of tough questions it can 
 				answer better than Siri.<br />
-				<strong>A2.</strong> <strong>a.</strong></p>
-				<p><strong>b.</strong> </p>
+				<strong>A2.</strong> <strong>a.</strong> We led over Watson 5-2.</p>
+				<p class="centered">
+				<img class="pic" alt="" src="images/a5_ans2_beating_watson.png" width="90%" /><br />
+				Figure 2. A question that we were right but Watson could not 
+				anwer</p>
+				<p><strong>b.</strong> Besides those mentioned in the article, 
+				there are still some YouTube video showing the differences 
+				between Siri and Google Now. We provide an example here.</p>
+				<p class="centered"><iframe width="640" height="360" src="http://www.youtube.com/embed/aFDYwo-PJO4?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+				<br />
+				Figure 3. Siri vs. Google Now</p>
+				<p>As we can see in the video, Siri has better capability 
+				interpreting what its users speak of, whereas Google Now can 
+				perform better relevant search. For example, Google Now answers 
+				following questions faster or provide better information than 
+				Siri does.</p>
+				<p>1. What's the capital of France? Google Now immediately 
+				popped Paris, but Siri spent sometime to find the answer.<br />
+				2. How much is one million and six divided by twenty-four? 
+				Google Now again gave the answer on-the-fly, but Siri could not 
+				understand the question.<br />
+				3. When was Apple founded? Google returned 1976 but Siri had no 
+				idea but suggested user to search from the web.<br />
+				4. Who invented traffic lights? Siri could not understand the 
+				question.</p>
 				<p><strong>Q3.</strong> Visit the roboshopper site at
 				<a href="http://www.roboshopper.com" target="_blank">
 				www.roboshopper.com</a>. Follow the instructions, and search for 
@@ -81,7 +115,14 @@
 				whenever someone mentions that product category in a public 
 				forum. Wait a day to get an email notification from your agent. 
 				Provide a print-screen of the email notification.<br />
-				<strong>A3.</strong> </p>
+				<strong>A3.</strong> We searched for 'dashboard software,' which 
+				we strongly encourage our clients to install so that 
+				entrepreneurs are able to monitor how well their business is. 
+				Sage One appeared to be the first result given by the shopping 
+				agent.</p>
+				<p class="centered">
+				<img class="pic" alt="" height="707" src="images/a5_ans3_shopping_agent.png" width="803" /><br />
+				Figure 4. A result given by the shopping agent</p>
 				<p><strong>Q4.</strong> <strong>a.</strong> Develop a facial 
 				animation with speech synthesis using Sitepal or Voki 
 				technology. Use it to welcome your visitors to your web site, by 
@@ -117,7 +158,14 @@
 				dog’s behavior by typing English commands. Comment on the dog’s 
 				understanding of written English, and give examples of when it 
 				failed to understand.<br />
-				<strong>A5.</strong> </p>
+				<strong>A5.</strong> It is obvious that that chicken did 
+				understand some English commands. We first tried saying 'hi' and 
+				'hello' to the chicken and we saw the chicken waived at the 
+				camera. The we tried 'jump,' 'turn around,' and 'fly', and then 
+				the chicken did as we wished, of course that chicken was unable 
+				to fly. Finally, we asked the chicken to 'jump twice,' or 'tour 
+				around three times.' But this time, the chicken only performed 
+				once.</p>
 				<p><strong>Q6.</strong> <strong>a.</strong> Go to
 				<a href="http://www.whattorent.com" target="_blank">
 				www.whattorent.com</a> or
@@ -154,7 +202,52 @@
 				assistant into a web site. Explain the application, list its 
 				features, and contrast it to an automated intelligent agent used 
 				as a customer assistant.<br />
-				<strong>A9.</strong> </p>
+				<strong>A9.</strong> Microsoft Agent is only compatible to 
+				Internet Explorer.
+				
+				<object classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" id="Agent1"></object> 
+				<script language=vbscript>
+					Sub window_onload
+						dim genie
+						agent1.characters.load  "genie", "c:/windows/msagent/chars/genie.acs"    
+						set  genie=agent1.characters("genie")
+						set GetShowAnimation = genie.Get ("state", "showing, speaking")
+
+						genie.get "animation", "greet,surprised,glanceleft,glanceright,explain,think,gesturedown,suggest"
+						genie.moveto 100,220
+						genie.show
+						genie.play "surprised"
+
+						genie.moveto 330,220
+						genie.play "greet"
+						genie.play "explain"
+						genie.speak "Welcome to NBA6010 Web page."
+						genie.speak "I am the answer to Question 9."
+						genie.speak "However, your wish is NOT my command this time, I'm here only for credits."
+
+						genie.moveto 210,350
+						genie.play "explain"
+						genie.speak "I am Professor Orman's personal genie"
+						genie.speak " I work with him very closely"
+						genie.play "think"
+						genie.speak " I think he is a genius."
+
+						genie.moveto 450,350
+						genie.play "explain" 
+						genie.speak "He published over 40 scientific articles, and taught some excellent courses."
+						genie.play "suggest"
+						genie.speak "I recommend Electronic Commerce course very highly"
+
+						genie.moveto 330,350
+						genie.play "greet"
+						genie.speak "Let me know if I can be of some assistance"
+						genie.play "gesturedown"
+						genie.speak "or contact the professor by clicking on his name"
+						genie.play "greet"
+						genie.speak "See you in class"
+						genie.hide
+					End Sub
+				</script></p>
 				<p><strong>Q10.</strong> <strong>a.</strong> Read the article on 
 				<a href="a5_automated_medicine.html" target="_blank">Automated Medicine</a> and list all the advantages of an automated 
 				doctor over human doctors. <strong>b.</strong> Explain how 
@@ -181,7 +274,14 @@
 				install agent simulation software and try the traffic 
 				application. Adjust your agent parameters to avoid traffic jams. 
 				Provide a screenshot, and explain your model.<br />
-				<strong>A11.</strong> </p>
+				<strong>A11.</strong> We set the alert condition as follows.</p>
+				<p class="centered">
+				<img class="pic" alt="" height="534" src="images/a5_ans11_alert_setting.png" width="534" /><br />
+				Figure X. Stock price alert for Apple Inc.</p>
+				<p>Once Apple's stock price reaches the condition, TradeTrakker 
+				will pup up an agent with voice alerts and animations.</p>
+				<p class="centered">
+				<img class="pic" alt="" src="images/a5_ans11_stock_price_alert.png" width="90%" /></p>
 				<p><strong>Q12.</strong> <strong>a.</strong> Download the 
 				personal assistant Hal and have a text and voice conversation 
 				with it. Provide a screen shot of your settings for Hal, and 
