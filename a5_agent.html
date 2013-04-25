@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>TransformIT - Assignment 5 - Answer to Q14. b.</title>
+</head>
+
+<body>
+	<object classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" id="Agent1"></object> 
+	<script language=vbscript>
+		Sub window_onload
+		dim Merlin
+		agent1.characters.load  "Merlin", "c:/windows/msagent/chars/merlin.acs"    
+		set Merlin=agent1.characters("Merlin")
+		set GetShowAnimation = Merlin.Get ("state", "showing, speaking")
+
+		Merlin.get "animation", "greet,explain,thinking"
+
+		Merlin.moveto 100,220
+		Merlin.show
+		Merlin.play "surprised"
+
+	    Merlin.Speak "Welcome to the Microsoft Agent Scripting Helper!"
+	    Merlin.Play "greet"
+	    Merlin.Play "explain"
+	    Merlin.Speak "Let's talk about E-commerce."
+	    Merlin.Play "explain"
+	    Merlin.Speak "Electronic commerce, commonly known as e-commerce, is a type of industry where buying and selling of product or service is conducted over electronic systems such as the Internet and other computer networks."
+
+		End Sub
+	</script>
+
+</body>
+
+</html>
